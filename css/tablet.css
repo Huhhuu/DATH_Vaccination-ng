@@ -1,0 +1,461 @@
+@media (max-width: 768px) {
+
+  .container,
+  .navbar {
+    padding: 0 28px;
+  }
+
+  /* ==================== NAVBAR ==================== */
+  .navbar_menu {
+    display: none;
+    position: fixed;
+    top: var(--header-height);
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    background: rgba(11, 21, 60, 0.98);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    padding: 30px 0;
+    gap: 0;
+  }
+
+  .navbar_menu.active {
+    display: flex;
+  }
+
+  .navbar_menu li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar_link {
+    display: block;
+    padding: 16px 24px;
+    font-size: 1.1rem;
+  }
+
+  .navbar_btn {
+    display: none;
+  }
+
+  .navbar_hamburger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 0;
+  }
+
+  .navbar_hamburger span {
+    width: 22px;
+  }
+
+  /* ==================== HERO SECTION ==================== */
+  .hero {
+    min-height: auto;
+  }
+
+  .hero_container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 36px;
+    padding-top: 32px;
+    padding-bottom: 40px;
+  }
+
+  .hero_content {
+    max-width: 100%;
+  }
+
+  .hero_subtitle {
+    margin-bottom: 16px;
+  }
+
+  .hero_title {
+    font-size: 2.35rem;
+    margin-bottom: 18px;
+  }
+
+  .hero_description {
+    max-width: 520px;
+    margin-bottom: 28px;
+  }
+
+  .hero_image-wrapper {
+    width: 100%;
+    max-width: 420px;
+    margin: 10px auto 0;
+  }
+
+  .hero_image-box {
+    width: 380px;
+    height: 420px;
+  }
+
+  .hero_float-card {
+    width: 65px;
+    height: 65px;
+  }
+
+  .hero_float-card img {
+    width: 46px;
+    height: 46px;
+  }
+
+  .hero_float-card--left {
+    left: -15px;
+  }
+
+  .hero_float-card--right {
+    width: 75px;
+    height: 75px;
+    right: -12px;
+  }
+
+  .hero_specialists {
+    left: -15px;
+  }
+
+  /* ==================== SCHEDULE SECTION ==================== */
+  .schedule {
+    padding-bottom: 40px;
+  }
+
+  .schedule_heading {
+    margin-bottom: 16px;
+  }
+
+  .schedule_heading i {
+    width: 36px;
+    height: 36px;
+  }
+
+  .schedule_heading span {
+    font-size: 1.05rem;
+  }
+
+  .schedule_bar {
+    padding: 24px 28px;
+  }
+
+  .schedule_bar-shadow {
+    top: -10px;
+  }
+
+  .schedule_bar-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px 30px;
+  }
+
+  .schedule_item {
+    width: 100%;
+  }
+
+  .schedule_btn {
+    grid-column: 2;
+    grid-row: 2;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    padding: 14px 28px;
+  }
+
+  /* ==================== PARTNERS SECTION ==================== */
+  .partners {
+    min-height: auto;
+    padding: 30px 0;
+  }
+
+  .partners_container {
+    gap: 20px;
+  }
+
+  .partners_logo {
+    height: 65px;
+  }
+
+  /* ==================== RESULTS SECTION ==================== */
+  .results {
+    padding: 70px 0;
+  }
+
+  .results_header {
+    padding: 24px 32px;
+    text-align: center;
+  }
+
+  .results_title {
+    font-size: 1.2rem;
+  }
+
+  .results_body {
+    padding: 32px 32px 36px;
+  }
+
+  .results_form-inputs {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+  }
+
+  .results_input {
+    width: 100%;
+    text-align: left;
+  }
+
+  .results_btn {
+    width: calc(100% / 3);
+    min-width: 140px;
+    align-self: flex-start;
+    text-align: center;
+  }
+
+  .results_certificate {
+    padding: 16px 24px;
+  }
+
+  /* ==================== WHY GET VACCINATED ==================== */
+  .why-vaccinate .container {
+    padding: 0 71px;
+  }
+
+  .why-vaccinate_header {
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+
+  .why-vaccinate_title {
+    font-size: 2.2rem;
+    max-width: 440px;
+  }
+
+  .why-vaccinate_description {
+    max-width: 100%;
+    padding-top: 0;
+  }
+
+  .why-vaccinate_cards {
+    grid-template-columns: 1fr 1fr;
+    gap: 38px;
+  }
+
+  .why-vaccinate_card {
+    min-height: 290px;
+    padding: 30px 24px;
+  }
+
+  .why-vaccinate_card--active {
+    grid-column: 1 / -1;
+    justify-self: start;
+    width: 449px;
+    height: 499px;
+  }
+
+  .why-vaccinate_card-title {
+    margin-top: 28px;
+  }
+
+  /* ==================== REGISTRATION ==================== */
+  .registration {
+    padding: 60px 0 70px;
+  }
+
+  .registration_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .registration_title {
+    font-size: 2.2rem;
+    align-self: flex-start;
+    max-width: 100%;
+    margin-bottom: 0;
+  }
+
+  .registration_card {
+    width: 390px;
+    height: 478px;
+    margin: 0 auto;
+  }
+
+  .registration_card-virus {
+    top: -38px;
+    left: -38px;
+    width: 125px;
+    height: 125px;
+  }
+
+  .registration_form {
+    max-width: 100%;
+  }
+
+  /* ==================== SYMPTOMS ==================== */
+  .symptoms {
+    padding: 70px 0 0;
+  }
+
+  .symptoms_title {
+    font-size: 2.35rem;
+    margin-bottom: 18px;
+  }
+
+  .symptoms_description {
+    font-size: 1rem;
+    max-width: 600px;
+  }
+
+  .symptoms_content {
+    height: 344px;
+    max-width: 768px;
+    margin-top: 30px;
+  }
+
+  .symptoms_man-wrap {
+    width: 458.42px;
+    height: 343.42px;
+  }
+
+  .symptoms_badge {
+    height: 50px;
+    padding: 0 18px 0 38px;
+    border-radius: 10px;
+  }
+
+  .symptoms_badge-icon {
+    left: -24px;
+    width: 56px;
+    height: 56px;
+  }
+
+  .symptoms_badge-text {
+    font-size: 0.88rem;
+  }
+
+  .symptoms_badge--1 {
+    top: 20px;
+    left: calc(50% - 220px);
+  }
+
+  .symptoms_badge--2 {
+    top: 115px;
+    left: calc(50% - 270px);
+  }
+
+  .symptoms_badge--3 {
+    top: 210px;
+    left: calc(50% - 280px);
+  }
+
+  .symptoms_badge--4 {
+    top: 20px;
+    left: calc(50% + 120px);
+  }
+
+  .symptoms_badge--5 {
+    top: 115px;
+    left: calc(50% + 155px);
+  }
+
+  .symptoms_badge--6 {
+    top: 210px;
+    left: calc(50% + 180px);
+  }
+
+  /* ==================== FEEDBACK ==================== */
+  .feedback {
+    padding: 70px 0 200px;
+  }
+
+  .feedback_title {
+    font-size: 2.35rem;
+    margin-bottom: 16px;
+  }
+
+  .feedback_description {
+    font-size: 1rem;
+    margin-bottom: 45px;
+  }
+
+  .feedback_content {
+    display: flex;
+    flex-direction: column;
+    gap: 85px;
+    max-width: 480px;
+    padding: 75px 0 50px;
+  }
+
+  .feedback_card-wrap {
+    max-width: 440px;
+  }
+
+  .feedback_card {
+    padding: 30px 26px;
+    border-radius: 22px;
+    min-height: auto;
+  }
+
+  .feedback_vial-img {
+    top: -55px;
+    width: 160px;
+  }
+
+  /* ==================== GET A QUOTE ==================== */
+  .quote {
+    margin-top: -145px;
+    margin-bottom: -145px;
+  }
+
+  .quote_card {
+    max-width: 690px;
+    padding: 14px;
+    border-radius: 36px;
+  }
+
+  .quote_card-inner {
+    padding: 42px 28px 45px;
+    border-radius: 26px;
+  }
+
+  .quote_title {
+    font-size: 2.2rem;
+    margin-bottom: 12px;
+  }
+
+  .quote_description {
+    font-size: 1rem;
+    margin-bottom: 26px;
+  }
+
+  .quote_input-wrap {
+    height: 56px;
+    padding: 0 0 0 24px;
+  }
+
+  .quote_submit-btn {
+    width: 75px;
+  }
+
+  /* ==================== FOOTER ==================== */
+  .footer {
+    padding: 190px 0 50px;
+  }
+
+  .footer_content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 28px;
+  }
+
+  .footer_nav {
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+}
