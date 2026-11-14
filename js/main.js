@@ -31,28 +31,43 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  const sections = document.querySelectorAll('section[id], [id="schedule"]');
   const allNavLinks = document.querySelectorAll('.navbar_link');
+  const navSections = Array.from(allNavLinks)
+    .map(link => {
+      const target = document.querySelector(link.getAttribute('href'));
+      return target ? { el: target, link } : null;
+    })
+    .filter(Boolean)
+    .sort((a, b) => a.el.getBoundingClientRect().top - b.el.getBoundingClientRect().top);
 
   const highlightNavLink = () => {
-    const scrollY = window.scrollY + 100;
+    if (!navSections.length) return;
 
-    sections.forEach(section => {
-      const sectionTop = section.getBoundingClientRect().top + window.scrollY;
-      const sectionHeight = section.offsetHeight;
-      const sectionId = section.getAttribute('id');
+    const headerOffset = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--header-height')) || 80;
+    const scrollPos = window.scrollY + headerOffset + 40;
+    const atBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2;
 
-      if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
-        allNavLinks.forEach(link => {
-          link.classList.remove('navbar_link--active');
-          if (link.getAttribute('href') === `#${sectionId}`) {
-            link.classList.add('navbar_link--active');
-          }
-        });
+    let activeItem = navSections[0];
+    if (atBottom) {
+      activeItem = navSections[navSections.length - 1];
+    } else {
+      navSections.forEach(item => {
+        const top = item.el.getBoundingClientRect().top + window.scrollY;
+        if (scrollPos >= top) {
+          activeItem = item;
+        }
+      });
+
+      const lastItem = navSections[navSections.length - 1];
+      if (lastItem.el.getBoundingClientRect().top <= window.innerHeight * 0.55) {
+        activeItem = lastItem;
       }
-    });
+    }
+
+    allNavLinks.forEach(link => link.classList.toggle('navbar_link--active', link === activeItem.link));
   };
 
+  highlightNavLink();
   window.addEventListener('scroll', highlightNavLink);
 
   const fadeElements = document.querySelectorAll('.fade-in');
